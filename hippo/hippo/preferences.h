@@ -9,13 +9,13 @@
 #ifndef __hippo__preferences__
 #define __hippo__preferences__
 
-#include <map>
+#include <unordered_map>
 #include <list>
 #include "attraction.h"
 
 class Preferences {
 private:
-    std::map<int, int> prefs;
+    std::unordered_map<int, int> prefs;
     
 public:
     Preferences(std::list<Attraction> & attrs);

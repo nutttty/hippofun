@@ -11,15 +11,19 @@
 
 
 #include <vector>
+#include <unordered_map>
 #include "quadrant.h"
+
 class parkMap {
     // master list of quadrants
     std::vector<Quadrant> allQuadrants;
     
     // adjancy lists of quadrant IDs
-    std::vector<std::vector<short>> adj;
+    std::unordered_map<short, short> adj;
     
     //path info
-        
+    std::unordered_map<short, std::unordered_map<short, short>> paths;
+    
+    
 };
 #endif /* defined(__hippo__map__) */
